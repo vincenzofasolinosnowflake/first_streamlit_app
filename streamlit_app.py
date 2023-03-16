@@ -33,7 +33,8 @@ fruityvice_normalized = pandas.json_normalize(fruityvice_response.json())
 # write your own comment - what does this do?
 streamlit.dataframe(fruityvice_normalized)
 
-import snowflake.connector streamlit.header("The fruit load list contains:")
+import snowflake.connector 
+streamlit.header("The fruit load list contains:")
 def get_fruit_load_list():
    with my_cnx.cursor() as my_cur:
       my_cur.execute("select * from fruit_load_list")
